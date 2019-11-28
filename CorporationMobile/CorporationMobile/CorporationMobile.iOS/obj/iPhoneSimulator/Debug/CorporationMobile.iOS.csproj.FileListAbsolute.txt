@@ -4,9 +4,12 @@ C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMob
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\optimized\
-C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\CorporationMobile.iOS.csprojAssemblyReference.cache
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\CorporationMobile.iOS.exe
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\CorporationMobile.iOS.pdb
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\Toasts.Forms.Plugin.Abstractions.dll
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\Toasts.Forms.Plugin.Abstractions.pdb
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\Toasts.Forms.Plugin.iOS.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
@@ -52,6 +55,7 @@ C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMob
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\CorporationMobile.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\bin\iPhoneSimulator\Debug\CorporationMobile.pdb
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\CorporationMobile.iOS.csprojAssemblyReference.cache
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\CorporationMobile.iOS.csproj.CopyComplete
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.iOS\obj\iPhoneSimulator\Debug\CorporationMobile.iOS.exe

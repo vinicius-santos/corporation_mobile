@@ -37,5 +37,16 @@ namespace CorporationMobile.Views.Corporation
                 base.OnAppearing();
             }
         }
+
+
+        public void OnItemSelected(object sender, ItemTappedEventArgs args)
+        {
+            var corporation = args.Item as Models.Corporation;
+            list.SelectedItem = null;
+            if (corporation != null)
+            {
+                _vm.EditCorporation(corporation);
+            }
+        }
     }
 }

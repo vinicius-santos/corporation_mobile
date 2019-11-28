@@ -18,55 +18,10 @@ namespace CorporationMobile.ViewModels
     public class CorporationViewModel : INotifyPropertyChanged
     {
         private CorporationView _pageCorporation;
-
-        private string _name;
-        public int _id;
-        public string _uf;
-        public string _nameFantasy;
-        public string _cnpj;
         private IToastNotificator _notificator;
         private CorporationApi _corporationApi;
-        public List<Corporation> _corporations;
+        private List<Corporation> _corporations;
 
-        public int ID
-        {
-            get { return _id; }
-            set
-            {
-                _id = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string UF
-        {
-            get { return _uf; }
-            set
-            {
-                _uf = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string NameFantasy
-        {
-            get { return _nameFantasy; }
-            set
-            {
-                _nameFantasy = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string CNPJ
-        {
-            get { return _cnpj; }
-            set
-            {
-                _cnpj = value;
-                OnPropertyChanged();
-            }
-        }
 
         public List<Corporation> Corporations
         {
@@ -85,17 +40,42 @@ namespace CorporationMobile.ViewModels
             _notificator = DependencyService.Get<IToastNotificator>();
         }
 
+
+        public ICommand NewCorporationCommand => new Command(NewCorporation);
+
+        public async void NewCorporation()
+        {
+            try
+            {
+                await _pageCorporation.Navigation.PushAsync(new CorporationDetailView());
+            }
+            catch (Exception)
+            {
+                await _notificator.Notify(ToastNotificationType.Error, ":(","Ops! Por favor tente criar novamente.", TimeSpan.FromSeconds(3));
+            }
+        }
+
+        public async void EditCorporation(Corporation item)
+        {
+            try
+            {
+                await _pageCorporation.Navigation.PushAsync(new CorporationDetailView(item));
+            }
+            catch (Exception)
+            {
+                await _notificator.Notify(ToastNotificationType.Error, ":(", "Ops! Por favor tente editar novamente.", TimeSpan.FromSeconds(3));
+            }
+        }
+
         public async Task LoadAsync()
         {
             try
             {
-                //IsBusy = true;
                 if (_corporationApi == null)
                     _corporationApi = new CorporationApi();
 
 
-                //var _vouchersFromApi = await _voucherApi.GetByArticleAsync(App.Instance.CurrentUser.Id, _currentArticle.Id);
-                //IsBusy = false;
+                Corporations = await _corporationApi.GetAll();
             }
             catch (Exception ex)
             {

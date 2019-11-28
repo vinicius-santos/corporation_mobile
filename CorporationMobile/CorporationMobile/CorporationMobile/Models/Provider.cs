@@ -13,5 +13,6 @@ namespace CorporationMobile.Models
         public DateTime DateRegister { get; set; }
         public DateTime HourRegister { get; set; }
         public List<string> Phone { get; set; }
+        public Corporation Corporation { get; set; }
     }
 }

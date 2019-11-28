@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using CorporationMobile.Models;
 using CorporationMobile.Views;
+using CorporationMobile.Services;
 
 namespace CorporationMobile.ViewModels
 {

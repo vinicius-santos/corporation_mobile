@@ -1,15 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CorporationMobile.Views.Corporation.CorporationView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+              xmlns:controls="clr-namespace:CorporationMobile.Controls;assembly=CorporationMobile"
+             x:Class="CorporationMobile.Views.Corporation.CorporationView" BackgroundColor="#FAFAFA">
+
+    <StackLayout>
+        <StackLayout Margin="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout 
+               Grid.Column="0"
+               Grid.Row="0"
+                        VerticalOptions="Center"
+               HorizontalOptions="Center"
+               BackgroundColor="Transparent">
+                    <Label 
+               HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                          Text="Empresa">
+                    </Label>
+                </StackLayout>
+            </Grid>
         </StackLayout>
-    </ContentPage.Content>
+
+
+        <ListView
+          x:Name="list"
+          ItemTapped="OnItemSelected"
+          ItemsSource="{Binding Corporations, Mode=TwoWay}"
+          BackgroundColor="{DynamicResource WindowBackgroundTable}"
+          HasUnevenRows="True"
+          SeparatorColor="Transparent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="{DynamicResource CardPadding}" Spacing="{DynamicResource CardSpacing}">
+                            <controls:CardView BackgroundColor="Transparent">
+                                <Grid Padding="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition                                 Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition                               Width="200" />
+                                        <ColumnDefinition                               Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout
+                                                Grid.Column="0"
+                                                HorizontalOptions="FillAndExpand"
+                                          
+                                                VerticalOptions="Fill">
+                                        <Label Text="{Binding NameFantasy}" FontSize="16" VerticalOptions="FillAndExpand"/>
+
+
+                                        <Label
+                          FontSize="14"
+                          Text="{Binding UF}"
+                          VerticalOptions="CenterAndExpand" />
+
+                                        <controls:HeaderDivider />
+                                        <Label
+                          FontAttributes="Bold"
+                          FontSize="14"
+                          HorizontalOptions="FillAndExpand"
+                          Text="{Binding CNPJ}"
+                          VerticalOptions="CenterAndExpand"
+                          />
+                                    </StackLayout>
+                                </Grid>
+
+                            </controls:CardView>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout
+              Padding="5,0,5,20"
+     Grid.Column="0"
+     Grid.Row="2"
+     HorizontalOptions="FillAndExpand"
+     VerticalOptions="FillAndExpand">
+            <Button
+        Command="{Binding NewCorporationCommand}"
+        BackgroundColor="LightGray"
+        BorderColor="LightGray"
+                BorderWidth="1"
+        FontSize="20"
+        Text="Cadastrar empesa"
+        HeightRequest="60" />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

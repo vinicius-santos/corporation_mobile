@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CorporationMobile.Views.Corporation.CorporationDetailView">
+    <ContentPage.Content>
+        <StackLayout
+               Padding="5,0,5,20"
+               Grid.Column="0"
+               Grid.Row="2"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand">
+            <Entry
+                    x:Name="txbNameFantasy"
+                    Keyboard="Text"
+                    Placeholder="Nome fantasia"
+                    Text="{Binding NameFantasy, Mode=TwoWay}" 
+            />
+
+            <Entry
+                    x:Name="txbCNPJ"
+                    Keyboard="Text"
+                    Placeholder="CNPJ"
+                    Text="{Binding CNPJ, Mode=TwoWay}" 
+            />
+
+            <Picker x:Name="picker" 
+                    Title="Estado" 
+                    ItemsSource="{Binding States}"
+                    SelectedItem="{Binding UF}"
+            />
+
+            <StackLayout
+              Padding="5,0,5,20"
+     Grid.Column="0"
+     Grid.Row="2"
+     HorizontalOptions="FillAndExpand"
+     VerticalOptions="FillAndExpand">
+                <Button
+        Command="{Binding SaveCommand}"
+        BackgroundColor="LightGray"
+        BorderColor="LightGray"
+                BorderWidth="1"
+        FontSize="20"
+        Text="Salvar"
+        HeightRequest="60" 
+       />
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

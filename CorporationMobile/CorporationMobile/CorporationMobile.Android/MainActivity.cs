@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Plugin.Toasts;
+using Xamarin.Forms;
 
 namespace CorporationMobile.Droid
 {
@@ -16,6 +18,9 @@ namespace CorporationMobile.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+
+            DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
+            ToastNotificatorImplementation.Init(this);
 
             base.OnCreate(savedInstanceState);
 

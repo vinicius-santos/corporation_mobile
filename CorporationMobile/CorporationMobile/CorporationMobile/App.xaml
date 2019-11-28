@@ -14,6 +14,9 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
+            <OnPlatform x:TypeArguments="Color" Android="#ECECEC" iOS="#C8C7CC" WinPhone="#C8C7CC" x:Key="Divider" />
+            <OnPlatform x:TypeArguments="Thickness" Android="8,5" iOS="5,0,5,16" WinPhone="0,0,0,16" x:Key="CardPadding" />
+            <OnPlatform x:TypeArguments="x:Double" Android="16" iOS="0" WinPhone="0" x:Key="CardSpacing" />
         </ResourceDictionary>
     </Application.Resources>
     

@@ -65,7 +65,7 @@ namespace CorporationMobile.Service.Api
         }
 
 
-        public async Task<bool> Update(string id, Corporation corporation)
+        public async Task<bool> Update(int id, Corporation corporation)
         {
             try
             {
@@ -89,7 +89,7 @@ namespace CorporationMobile.Service.Api
         }
 
 
-        public async Task<bool> Delete(string id)
+        public async Task<bool> Delete(int id)
         {
             try
             {

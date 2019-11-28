@@ -7,7 +7,8 @@ namespace CorporationMobile.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        Corporation
     }
     public class HomeMenuItem
     {

@@ -4,6 +4,7 @@ C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMob
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\mscorlib.dll
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Core.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Numerics.dll
@@ -11,6 +12,8 @@ C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMob
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Runtime.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Xml.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Xml.Linq.dll
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Toasts.Forms.Plugin.Abstractions.dll
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Toasts.Forms.Plugin.Droid.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Common.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Runtime.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.Common.dll
@@ -65,3 +68,5 @@ C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMob
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Web.Services.dll
 C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\Mono.Security.dll
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Resources.ResourceManager.dll
+C:\bludata\corporation_mobile\CorporationMobile\CorporationMobile\CorporationMobile.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
