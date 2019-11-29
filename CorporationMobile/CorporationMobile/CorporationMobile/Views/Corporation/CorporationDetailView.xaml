@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CorporationMobile.Views.Corporation.CorporationDetailView">
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
+             x:Class="CorporationMobile.Views.Corporation.CorporationDetailView"
+             Title="Cadastrar empresa">
     <ContentPage.Content>
         <StackLayout
                Padding="5,0,5,20"
@@ -19,17 +21,17 @@
                     Text="{Binding NameFantasy, Mode=TwoWay}" 
             />
 
-            <Entry
-                    x:Name="txbCNPJ"
-                    Keyboard="Text"
-                    Placeholder="CNPJ"
-                    Text="{Binding CNPJ, Mode=TwoWay}" 
-            />
+            <Entry  Placeholder="CNPJ"  x:Name="txbCNPJ" Keyboard="Numeric"  Text="{Binding CNPJ, Mode=TwoWay}" >
+                <Entry.Behaviors>
+                    <behaviorPack:CNPJValidationBehavior />
+                    <behaviorPack:MaskedBehavior Mask="XX.XXX.XXX/XXXX-XX" />
+                </Entry.Behaviors>
+            </Entry>
 
             <Picker x:Name="picker" 
                     Title="Estado" 
-                    ItemsSource="{Binding States}"
-                    SelectedItem="{Binding UF}"
+                    ItemsSource="{Binding States, Mode=TwoWay}"
+                    SelectedIndex="{Binding IndexUF}"
             />
 
             <StackLayout
@@ -38,16 +40,19 @@
      Grid.Row="2"
      HorizontalOptions="FillAndExpand"
      VerticalOptions="FillAndExpand">
-                <Button
-        Command="{Binding SaveCommand}"
-        BackgroundColor="LightGray"
-        BorderColor="LightGray"
-                BorderWidth="1"
-        FontSize="20"
-        Text="Salvar"
-        HeightRequest="60" 
-       />
+                
             </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                <Button
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding SaveCorporationCommand}"
+                    Style="{DynamicResource ButtonSuccess}"
+                    Text="Salvar"
+                />       
+            </StackLayout>
+
+
         </StackLayout>
 
     </ContentPage.Content>

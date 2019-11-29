@@ -169,6 +169,18 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.BehaviorValidationPack/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.0.0.709238"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        }
+      },
       "CorporationMobile/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -176,7 +188,8 @@
           "Newtonsoft.Json": "12.0.3",
           "Toasts.Forms.Plugin": "2.0.4",
           "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.2.0.709249",
+          "Xamarin.Forms.BehaviorValidationPack": "1.1.0"
         },
         "compile": {
           "bin/placeholder/CorporationMobile.dll": {}
@@ -354,6 +367,18 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.BehaviorValidationPack/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.0.0.709238"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        }
+      },
       "CorporationMobile/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -361,7 +386,8 @@
           "Newtonsoft.Json": "12.0.3",
           "Toasts.Forms.Plugin": "2.0.4",
           "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.2.0.709249",
+          "Xamarin.Forms.BehaviorValidationPack": "1.1.0"
         },
         "compile": {
           "bin/placeholder/CorporationMobile.dll": {}
@@ -539,6 +565,18 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.BehaviorValidationPack/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.0.0.709238"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        }
+      },
       "CorporationMobile/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -546,7 +584,8 @@
           "Newtonsoft.Json": "12.0.3",
           "Toasts.Forms.Plugin": "2.0.4",
           "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.2.0.709249",
+          "Xamarin.Forms.BehaviorValidationPack": "1.1.0"
         },
         "compile": {
           "bin/placeholder/CorporationMobile.dll": {}
@@ -724,6 +763,18 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.BehaviorValidationPack/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.0.0.709238"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll": {}
+        }
+      },
       "CorporationMobile/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -731,7 +782,8 @@
           "Newtonsoft.Json": "12.0.3",
           "Toasts.Forms.Plugin": "2.0.4",
           "Xamarin.Essentials": "1.2.0",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.2.0.709249",
+          "Xamarin.Forms.BehaviorValidationPack": "1.1.0"
         },
         "compile": {
           "bin/placeholder/CorporationMobile.dll": {}
@@ -1143,6 +1195,18 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.BehaviorValidationPack/1.1.0": {
+      "sha512": "VBnDKM+qK2RBlT0i5nTPBn2C4unoTZ34DPBxCO4aaUWycZDBckMiNKZA4vTV5b/rc50p5uWuLpQwUdQriQol8w==",
+      "type": "package",
+      "path": "xamarin.forms.behaviorvalidationpack/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Xamarin.Forms.BehaviorValidationPack.dll",
+        "xamarin.forms.behaviorvalidationpack.1.1.0.nupkg.sha512",
+        "xamarin.forms.behaviorvalidationpack.nuspec"
+      ]
+    },
     "CorporationMobile/1.0.0": {
       "type": "project",
       "path": "../CorporationMobile/CorporationMobile.csproj",
@@ -1154,7 +1218,8 @@
       "CorporationMobile >= 1.0.0",
       "Toasts.Forms.Plugin >= 2.0.4",
       "Xamarin.Essentials >= 1.2.0",
-      "Xamarin.Forms >= 4.2.0.709249"
+      "Xamarin.Forms >= 4.2.0.709249",
+      "Xamarin.Forms.BehaviorValidationPack >= 1.1.0"
     ]
   },
   "packageFolders": {
@@ -1210,6 +1275,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.2.0.709249, )"
+          },
+          "Xamarin.Forms.BehaviorValidationPack": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           }
         }
       }

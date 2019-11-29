@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
               xmlns:controls="clr-namespace:CorporationMobile.Controls;assembly=CorporationMobile"
-             x:Class="CorporationMobile.Views.Corporation.CorporationView" BackgroundColor="#FAFAFA">
+             x:Class="CorporationMobile.Views.Corporation.CorporationView"
+             Title="Empresa">
 
     <StackLayout>
         <StackLayout Margin="1">
@@ -18,25 +19,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-
-
-                <StackLayout 
-               Grid.Column="0"
-               Grid.Row="0"
-                        VerticalOptions="Center"
-               HorizontalOptions="Center"
-               BackgroundColor="Transparent">
-                    <Label 
-               HorizontalOptions="Center"
-                            HorizontalTextAlignment="Center"
-                            FontAttributes="Bold"
-                            FontSize="20"
-                          Text="Empresa">
-                    </Label>
-                </StackLayout>
             </Grid>
         </StackLayout>
-
 
         <ListView
           x:Name="list"
@@ -96,13 +80,11 @@
      HorizontalOptions="FillAndExpand"
      VerticalOptions="FillAndExpand">
             <Button
-        Command="{Binding NewCorporationCommand}"
-        BackgroundColor="LightGray"
-        BorderColor="LightGray"
-                BorderWidth="1"
-        FontSize="20"
-        Text="Cadastrar empesa"
-        HeightRequest="60" />
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding NewCorporationCommand}"
+                Style="{DynamicResource ButtonPrimary}"
+                Text="Cadastrar empresa" 
+            />  
         </StackLayout>
     </StackLayout>
 </ContentPage>

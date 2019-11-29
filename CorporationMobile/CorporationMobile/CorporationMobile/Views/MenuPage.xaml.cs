@@ -20,8 +20,9 @@ namespace CorporationMobile.Views
 
             menuItems = new List<HomeMenuItem>
             {
+                new HomeMenuItem {Id = MenuItemType.Home, Title="Início" },
                 new HomeMenuItem {Id = MenuItemType.Corporation, Title="Empresa" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.Provider, Title="Fornecedor" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
@@ -35,6 +36,14 @@ namespace CorporationMobile.Views
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
+
+
+
+        }
+
+        protected override  void OnAppearing()
+        {
+            base.OnAppearing();
         }
     }
 }

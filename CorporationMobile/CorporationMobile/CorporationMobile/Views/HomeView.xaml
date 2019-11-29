@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:CorporationMobile.Controls;assembly=CorporationMobile"
+             x:Class="CorporationMobile.Views.HomeView"
+             Title="Início">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Margin="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </StackLayout>
+            
+            <StackLayout
+                             Padding="2,2,2,2"
+                             Grid.Column="0"
+                             Grid.Row="0"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
+                        >
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                Command="{Binding OpenCorporationCommand}"
+                                Style="{DynamicResource ButtonHome}"
+                                Text="Empresa" 
+                            />
+
+                           
+                        </StackLayout>
+
+                        <StackLayout
+                             Padding="2,2,2,2"
+                             Grid.Column="0"
+                             Grid.Row="1"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
+                        >
+                            <Button
+                                HorizontalOptions="FillAndExpand"
+                                Command="{Binding OpenProviderCommand}"
+                                Style="{DynamicResource ButtonHome}"
+                                Text="Fornecedor" 
+                            />
+                        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

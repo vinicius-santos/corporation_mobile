@@ -27,22 +27,21 @@ namespace CorporationMobile.Views.Corporation
             InitializeComponent();
             _vm = new CorporationDetailViewModel(this, corporation);
             BindingContext = _vm;
+            Init();
         }
 
-        protected override async void OnAppearing()
+
+        //OnApering not called in first time bug..
+        private async void Init()
         {
-            try
-            {
-                await _vm.LoadAsync();
-            }
-            catch (System.Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
-            finally
-            {
-                base.OnAppearing();
-            }
+            await _vm.LoadAsync();
+        }
+
+
+        protected override async  void OnAppearing()
+        {
+            await _vm.LoadAsync();
+            base.OnAppearing();
         }
     }
 }

@@ -20,6 +20,14 @@ namespace CorporationMobile.Views.Corporation
             InitializeComponent();
             _vm = new CorporationViewModel(this);
             BindingContext = _vm;
+            Init();
+        }
+
+
+        //OnApering not called in first time bug..
+        private async void Init()
+        {
+            await _vm.LoadAsync();
         }
 
         protected override async void OnAppearing()

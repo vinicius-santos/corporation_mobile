@@ -19,7 +19,7 @@ namespace CorporationMobile
             DependencyService.Register<CorporationApi, CorporationApi>();
             MainPage = new MainPage();
         }
-
+         
         public static void ShowToast(ToastNotificationType toastNotificationType, string title, string message, int? seconds = null)
         {
             try

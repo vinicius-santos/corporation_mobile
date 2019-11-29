@@ -7,6 +7,7 @@ using Xamarin.Forms.Xaml;
 
 using CorporationMobile.Models;
 using CorporationMobile.Views.Corporation;
+using CorporationMobile.Views.Provider;
 
 namespace CorporationMobile.Views
 {
@@ -19,10 +20,14 @@ namespace CorporationMobile.Views
         public MainPage()
         {
             InitializeComponent();
-
             MasterBehavior = MasterBehavior.Popover;
-
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+        }
+
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
 
         public async Task NavigateFromMenu(int id)
@@ -31,11 +36,14 @@ namespace CorporationMobile.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                    case (int)MenuItemType.Home:
+                        MenuPages.Add(id, new NavigationPage(new HomeView()));
                         break;
                     case (int)MenuItemType.Corporation:
                         MenuPages.Add(id, new NavigationPage(new CorporationView()));
+                        break;
+                    case (int)MenuItemType.Provider:
+                        MenuPages.Add(id, new NavigationPage(new ProviderView()));
                         break;
                 }
             }
@@ -47,7 +55,7 @@ namespace CorporationMobile.Views
                 Detail = newPage;
 
                 if (Device.RuntimePlatform == Device.Android)
-                    await Task.Delay(100);
+                    await Task.Delay(50);
 
                 IsPresented = false;
             }

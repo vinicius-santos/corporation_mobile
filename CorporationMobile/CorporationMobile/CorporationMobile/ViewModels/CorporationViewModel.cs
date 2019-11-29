@@ -12,6 +12,7 @@ using Plugin.Toasts;
 using CorporationMobile.Service.Api;
 using CorporationMobile.Models;
 using System.Diagnostics;
+using CorporationMobile.Views.Provider;
 
 namespace CorporationMobile.ViewModels
 {
@@ -21,7 +22,8 @@ namespace CorporationMobile.ViewModels
         private IToastNotificator _notificator;
         private CorporationApi _corporationApi;
         private List<Corporation> _corporations;
-
+        private ProviderDetailView providerDetailView;
+        private Provider item;
 
         public List<Corporation> Corporations
         {
@@ -39,7 +41,6 @@ namespace CorporationMobile.ViewModels
             _pageCorporation = page;
             _notificator = DependencyService.Get<IToastNotificator>();
         }
-
 
         public ICommand NewCorporationCommand => new Command(NewCorporation);
 

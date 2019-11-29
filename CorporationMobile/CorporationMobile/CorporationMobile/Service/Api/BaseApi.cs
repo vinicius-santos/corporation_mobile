@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace CorporationMobile.Service.Api
@@ -16,8 +17,11 @@ namespace CorporationMobile.Service.Api
                 hndlr.Proxy = null;
                 hndlr.UseProxy = false;
                 MyHttpClient = new HttpClient(hndlr);
-                MyHttpClient.MaxResponseContentBufferSize = 1000000 * 10;
+                MyHttpClient.Timeout = TimeSpan.FromSeconds(1000);
+                MyHttpClient.MaxResponseContentBufferSize = 3000000 * 10;
+                MyHttpClient.DefaultRequestHeaders.Accept.Clear();
                 MyHttpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+                MyHttpClient.DefaultRequestHeaders.Add("Content-Type", "application/json");
             }
         }
     }

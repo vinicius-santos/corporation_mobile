@@ -18,7 +18,6 @@ namespace CorporationMobile.ViewModels
     public class CorporationDetailViewModel : INotifyPropertyChanged
     {
 
-        private string _name;
         private int _id;
         private string _uf;
         private string _nameFantasy;
@@ -27,7 +26,7 @@ namespace CorporationMobile.ViewModels
         private IToastNotificator _notificator;
         private CorporationApi _corporationApi;
         private List<string> _states;
-
+        private int _indexUF;
 
         public int ID
         {
@@ -38,6 +37,18 @@ namespace CorporationMobile.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        public int IndexUF
+        {
+            get { return _indexUF; }
+            set
+            {
+                _indexUF = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public List<string> States
         {
             get { return _states; }
@@ -100,13 +111,12 @@ namespace CorporationMobile.ViewModels
         {
             try
             {
+                UF = States[IndexUF];
                 Corporation corporation = new Corporation();
                 corporation.CNPJ = CNPJ;
                 corporation.NameFantasy = NameFantasy;
                 corporation.UF = UF;
                 corporation.ID = ID;
-
-                States = new List<string>();
                 if (ID > 0)
                 {
                     bool status = await _corporationApi.Update(corporation.ID, corporation);
@@ -144,9 +154,10 @@ namespace CorporationMobile.ViewModels
         {
             try
             {
-                States = Corporation.States();
                 if (_corporationApi == null)
                     _corporationApi = new CorporationApi();
+                States = Corporation.States();
+                IndexUF = States.FindIndex(a => a == UF);
             }
             catch (Exception ex)
             {

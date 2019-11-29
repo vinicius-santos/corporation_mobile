@@ -45,7 +45,7 @@ namespace CorporationMobile.Service.Api
         {
             try
             {
-                var uri = new Uri(string.Concat(Constants.API_URL, $"corporation/post"));
+                var uri = new Uri(string.Concat(Constants.API_URL, $"corporation/save"));
                 var json = JsonConvert.SerializeObject(corporation, Formatting.None);
                 using (var content = new StringContent(json, Encoding.UTF8, "application/json"))
                 {

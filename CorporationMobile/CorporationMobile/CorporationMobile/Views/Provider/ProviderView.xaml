@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              xmlns:controls="clr-namespace:CorporationMobile.Controls;assembly=CorporationMobile"
+             x:Class="CorporationMobile.Views.Provider.ProviderView"
+             Title="Fornecedor">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="1" Spacing="1" Orientation="Horizontal">
+                <SearchBar WidthRequest="25" HorizontalOptions="FillAndExpand" Margin="0"  FontSize="10"  Placeholder="nome" Keyboard="Text" TextChanged="SearchBar_TextChanged"></SearchBar>
+                <SearchBar  Margin="0"  WidthRequest="30" FontSize="10"  HorizontalOptions="FillAndExpand" Keyboard="Text" Placeholder="CPF/CNPJ" TextChanged="SearchBar_CPFCNPJChanged">
+
+                </SearchBar>
+                <SearchBar  FontSize="10" Margin="0" WidthRequest="35" HorizontalOptions="FillAndExpand" Keyboard="Text"  Placeholder="Data cadastro" TextChanged="SearchBar_DataChanged"></SearchBar>
+            </StackLayout>
+            
+            <StackLayout Margin="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </StackLayout>
+        
+            <ListView
+          x:Name="list"
+          ItemTapped="OnItemSelected"
+          ItemsSource="{Binding Providers, Mode=TwoWay}"
+          BackgroundColor="{DynamicResource WindowBackgroundTable}"
+          HasUnevenRows="True"
+          SeparatorColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="{DynamicResource CardPadding}" Spacing="{DynamicResource CardSpacing}">
+                                <controls:CardView BackgroundColor="Transparent">
+                                    <Grid Padding="5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition                                 Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition                               Width="200" />
+                                            <ColumnDefinition                               Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackLayout
+                                                Grid.Column="0"
+                                                HorizontalOptions="FillAndExpand"
+                                          
+                                                VerticalOptions="Fill">
+                                            <Label Text="{Binding Name}" FontSize="16" VerticalOptions="FillAndExpand"/>
+                                            <Label Text="{Binding DateRegister, StringFormat='{0:dd MM, yyyy}'}" FontSize="16" VerticalOptions="FillAndExpand"/>
+                                            <Label Text="{Binding CPF}" FontSize="16" VerticalOptions="FillAndExpand"/>
+                                            <Label Text="{Binding CNPJ}" FontSize="16" VerticalOptions="FillAndExpand"/>
+                                            <controls:HeaderDivider />
+
+                                        </StackLayout>
+                                    </Grid>
+
+                                </controls:CardView>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout
+              Padding="5,0,5,20"
+     Grid.Column="0"
+     Grid.Row="2"
+     HorizontalOptions="FillAndExpand"
+     VerticalOptions="FillAndExpand">
+                <Button
+                x:Name="Person"
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding ButtonClickCommand}"
+                CommandParameter="Person"
+                Style="{DynamicResource ButtonPrimary}"
+                Text="Cadastrar fornecedor pessoa física" 
+                />
+                <Button
+                x:Name="Legal"
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding ButtonClickCommand}"
+                CommandParameter="Legal"
+                Style="{DynamicResource ButtonPrimary}"
+                Text="Cadastrar fornecedor jurídico" 
+            />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

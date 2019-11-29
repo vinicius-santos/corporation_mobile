@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
+             x:Class="CorporationMobile.Views.Provider.ProviderDetailView"
+             Title="Cadastrar fornecedor"
+             >
+    <ContentPage.Content>
+
+
+        <StackLayout
+               Padding="5,0,5,20"
+               Grid.Column="0"
+               Grid.Row="2"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+            >
+
+        
+            <Entry
+                    x:Name="txbName"
+                    Keyboard="Text"
+                    Placeholder="Nome"
+                    Text="{Binding Name, Mode=TwoWay}" 
+            />
+
+            <Entry  Placeholder="CNPJ"  IsVisible="{Binding IsCorporation}"  x:Name="txbCNPJ" Keyboard="Numeric"  Text="{Binding CNPJ, Mode=TwoWay}" >
+                <Entry.Behaviors>
+                    <behaviorPack:CNPJValidationBehavior />
+                    <behaviorPack:MaskedBehavior Mask="XX.XXX.XXX/XXXX-XX" />
+                </Entry.Behaviors>
+            </Entry>
+
+            <Entry  Placeholder="CPF" IsVisible="{Binding IsPerson}" x:Name="txbCPF" Keyboard="Numeric"  Text="{Binding CPF, Mode=TwoWay}" >
+                <Entry.Behaviors>
+                    <behaviorPack:CPFValidationBehavior />
+                    <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
+                </Entry.Behaviors>
+            </Entry>
+
+            <Entry  Placeholder="RG" IsVisible="{Binding IsPerson}" x:Name="txbRG" Keyboard="Numeric"  Text="{Binding RG, Mode=TwoWay}" >
+                <Entry.Behaviors>
+                    <behaviorPack:NumberValidationBehavior />
+                    <behaviorPack:MaskedBehavior Mask="X.XXX.XXX-XX" />
+                </Entry.Behaviors>
+            </Entry>
+
+
+            <Label IsVisible="{Binding IsPerson}"  Text="Data de aniversário" />
+            <DatePicker  Format="dd/MM/yyyy"  Date="{Binding BirthDate}" >
+             
+            </DatePicker>
+
+
+            <Entry  Placeholder="Telefone"  x:Name="txbPhone" Keyboard="Telephone"  Text="{Binding Phone, Mode=TwoWay}" >
+                <Entry.Behaviors>
+                    <behaviorPack:NumberValidationBehavior />
+                    <behaviorPack:MaskedBehavior Mask="(XX)XXXX-XXXX" />
+                </Entry.Behaviors>
+            </Entry>
+
+
+
+            <Picker x:Name="picker" 
+                    Title="Empresa" 
+                    ItemsSource="{Binding Corporations, Mode=TwoWay}"
+                    ItemDisplayBinding="{Binding NameFantasy}"
+                    SelectedItem="{Binding Corporation, Mode=TwoWay}"
+                    SelectedIndex="{Binding IndexCorporation}"
+            />
+
+            <StackLayout
+              Padding="5,0,5,20"
+     Grid.Column="0"
+     Grid.Row="2"
+     HorizontalOptions="FillAndExpand"
+     VerticalOptions="FillAndExpand">
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                <Button
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding SaveProviderCommand}"
+                    Style="{DynamicResource ButtonSuccess}"
+                    Text="Salvar"
+                />
+            </StackLayout>
+        </StackLayout>
+        
+        
+
+    </ContentPage.Content>
+</ContentPage>
